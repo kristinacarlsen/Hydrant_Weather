@@ -1,7 +1,13 @@
-# Experimenting with writing Ruby arrays.
+require 'open_weather'
+require 'dotenv'
+Dotenv.load
 
-newPlace = {
-    'city' => 'Tucson',
-    'state' => 'Arizona',
-    'temp' => '74',
-}
+
+
+class WeatherAPI
+    options = { units: "metric", APPID: ENV['WEATHER_API_KEY'] }
+    OpenWeather::Current.city("Tucson, AZ", options)
+end
+
+newWeather = WeatherAPI.new
+puts newWeather

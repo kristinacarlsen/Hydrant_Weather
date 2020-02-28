@@ -9,6 +9,8 @@ gem "sqlite3"
 gem "pry-byebug"
 gem 'sinatra-bootstrap', :require => 'sinatra/bootstrap'
 gem 'slim'
+gem 'open-weather'
+gem 'dotenv'
 #git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
