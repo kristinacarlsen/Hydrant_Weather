@@ -16,7 +16,7 @@ Dotenv.load
 require 'net/http'
 
 def results
-    results = Net::HTTP.get('http://api.openweathermap.org/data/2.5/weather?q=85719&APPID=bf95f6ac0e730b200b31ea93a2add104&units=imperial')
+    results = Net::HTTP.get('http://api.openweathermap.org/data/2.5/weather?q=85719&APPID=#{ENV['WEATHER_API_KEY']}&units=imperial')
 
 end
 
